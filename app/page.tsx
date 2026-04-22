@@ -56,7 +56,7 @@ export default function Home() {
 
   useEffect(() => {
     if (phase !== "accepted") return;
-    const id = setTimeout(() => setPhase("final"), 5000);
+    const id = setTimeout(() => setPhase("final"), 3500);
     return () => clearTimeout(id);
   }, [phase]);
 
@@ -95,7 +95,7 @@ export default function Home() {
           )}
         </div>
         <p className="max-w-xl text-base text-rose-900/70 sm:text-lg">
-          Telefonunun kamerasıyla bu QR'ı tara, devamı seni orada bekliyor 🌸
+          Telefonunun kamerasıyla bu QR&apos;ı tara, devamı seni orada bekliyor 🌸
         </p>
       </div>
     );
@@ -124,8 +124,6 @@ export default function Home() {
               <motion.button
                 type="button"
                 onClick={() => setPhase("accepted")}
-                animate={{ scale: [1, 1.06, 1] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                 whileHover={{ scale: 1.15, rotate: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="rounded-full bg-linear-to-r from-pink-500 via-fuchsia-500 to-rose-500 px-8 py-4 text-xl font-extrabold tracking-wide text-white shadow-[0_0_30px_rgba(236,72,153,0.8)] ring-4 ring-white/60 sm:px-12 sm:py-5 sm:text-2xl"
@@ -139,8 +137,7 @@ export default function Home() {
                 onClick={dodge}
                 animate={{ x: noPos.x, y: noPos.y }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                style={{ fontFamily: "Comic Sans MS, Chalkboard, cursive" }}
-                className="rounded-sm border-2 border-dashed border-yellow-900 bg-[#7a6b3a] px-2 py-1 text-[10px] italic text-[#3a2f12] shadow-inner line-through decoration-red-800 decoration-2 sm:px-3 sm:text-xs"
+                className="rounded-full bg-linear-to-r from-stone-500 via-stone-600 to-zinc-700 px-5 py-2.5 text-base font-semibold text-white/90 line-through decoration-red-500 decoration-2 shadow-md sm:px-7 sm:py-3 sm:text-lg"
               >
                 hayır
               </motion.button>
@@ -187,17 +184,13 @@ export default function Home() {
                 type="button"
                 onClick={openAR}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0, scale: [1, 1.05, 1] }}
-                transition={{
-                  opacity: { duration: 0.8, delay: 0.6 },
-                  y: { duration: 0.8, delay: 0.6 },
-                  scale: { duration: 1.6, repeat: Infinity, ease: "easeInOut", delay: 1.4 },
-                }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="rounded-full bg-linear-to-r from-rose-400 via-pink-500 to-fuchsia-500 px-8 py-4 text-xl font-extrabold tracking-wide text-white shadow-[0_0_30px_rgba(244,114,182,0.8)] ring-4 ring-white/60 sm:px-12 sm:py-5 sm:text-2xl"
               >
-                Çiçeğini al 🌸
+                Çiçek 🌸
               </motion.button>
             </div>
           </motion.div>
