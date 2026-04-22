@@ -19,17 +19,17 @@ export const metadata: Metadata = {
       : "http://localhost:3000"
   ),
   title: "SENA 💖 FURKAN",
-  description: "Evlilik Teklifi",
+  description: "19.04.2026",
   openGraph: {
     title: "SENA 💖 FURKAN",
-    description: "Evlilik Teklifi",
+    description: "19.04.2026",
     type: "website",
     locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
     title: "SENA 💖 FURKAN",
-    description: "Evlilik Teklifi",
+    description: "19.04.2026",
   },
 };
 
